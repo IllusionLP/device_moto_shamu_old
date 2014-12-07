@@ -165,6 +165,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.monitorRotation=true 
 
+# Missing Props
 PRODUCT_PROPERTY_OVERRIDES += \
     fmas.spkr_6ch=35,20,110 \
     fmas.spkr_2ch=35,25 \
@@ -176,10 +177,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.voicerec=false \
     persist.audio.fluence.speaker=false \
     persist.radio.sib16_support=1 \
-    persist.rcs.supported=0
-
-# never dexopt the MotoSignature
-$(call add-product-dex-preopt-module-config,MotoSignatureApp,disable)
+    persist.rcs.supported=0 \
+    drm.service.enabled=true
 
 # WiFi calling
 PRODUCT_PROPERTY_OVERRIDES += \
