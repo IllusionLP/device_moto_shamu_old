@@ -179,6 +179,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
     persist.rcs.supported=0
 
+# never dexopt the MotoSignature
+$(call add-product-dex-preopt-module-config,MotoSignatureApp,disable)
+
 # WiFi calling
 PRODUCT_PROPERTY_OVERRIDES += \
  persist.data.iwlan.enable=true \
