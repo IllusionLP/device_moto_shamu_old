@@ -165,6 +165,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.monitorRotation=true
 
+# WiFi calling
+PRODUCT_PROPERTY_OVERRIDES += \
+ persist.data.iwlan.enable=true \
+ persist.radio.ignore_ims_wlan=1 \
+ persist.radio.data_con_rprt=1
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.isUsbOtgEnabled=1
 
